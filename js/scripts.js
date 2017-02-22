@@ -1,7 +1,11 @@
 $(document).ready(function(){
   $("#formOne").submit(function(){
 
-    var pigLatin = $("#pigLatin").val();
+    var userInput = $("#pigLatin").val();
+    var pigLatin = function(text){
+      $("#result").text(userInput);
+    }
+    pigLatin(userInput);
 
 
 
@@ -11,9 +15,7 @@ $(document).ready(function(){
 
 
 
-
-
-
+    $("#result").show();
 
     event.preventDefault();
   })
